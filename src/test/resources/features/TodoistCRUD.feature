@@ -1,9 +1,10 @@
 Feature: Todoist CRUD
 
-  Scenario: Create a new proyect on todoist page
-    Given I have the "Project" endpoint
+  @RemoveProjectCreated
+  Scenario: Create a new project on todoist page
+    Given I have the "projects" endpoint
     When I send a POST request the following values:
-      | Name          | Movies to watch |
-#      | Comment_count | 0               |
-#      | Order         | 1               |
+        | name                       |wacht movies |
+#      | comment_count | 0                          |
+#      | order         | 1                          |
     Then  I expect the status code as 200

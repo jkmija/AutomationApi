@@ -5,7 +5,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class Authentication {
 
-  private static final String TOKEN_HEADER = "X-TrackerToken";
+  private static final String TOKEN_HEADER = "OAuth 2.0";
   private static Authentication instance;
   private RequestSpecification requestSpecification;
 
@@ -21,7 +21,7 @@ public class Authentication {
   }
 
   private void initApi(){
-    requestSpecification = new RequestSpecBuilder().setRelaxedHTTPSValidation().addHeader(TOKEN_HEADER,"7961b447dee6e4ffc9e97a466d850f8e06b238bb").build();
+    requestSpecification = new RequestSpecBuilder().setRelaxedHTTPSValidation().build();
   }
 
   public RequestSpecification getRequestSpecification(){
